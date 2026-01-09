@@ -29,3 +29,30 @@ function updateProgress() {
   document.getElementById('progressFill').style.width = percent + '%';
   document.getElementById('progressPercent').textContent = percent + '%';
 }
+
+/* ---------- Storage ---------- */
+function saveHabits() {
+  localStorage.setItem('smart-habits', JSON.stringify(habits));
+}
+
+function loadHabits() {
+  const data = localStorage.getItem('smart-habits');
+  habits = data ? JSON.parse(data) : [];
+}
+
+/* ---------- Calculations ---------- */
+function calculateStreak(habit) {
+  let streak = 0;
+  const todayStr = new Date().toISOString().split('T')[0];
+  let currentDate = new Date();
+  while (habit.completedDates?.includes(currentDate.toISOString().split('T')[0])) {
+    streak++;
+    currentDate.setDate(currentDate.getDate() - 1);
+  }
+  return streak;
+}
+
+window.onload = () => {
+  loadHabits();
+  render();
+};
