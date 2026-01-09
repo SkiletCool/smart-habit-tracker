@@ -5,16 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Habit Tracker</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
     <header class="app-header">
         <h1>Smart Habit Tracker</h1>
+        <button id="themeToggle" title="Toggle dark mode">🌙</button>
     </header>
-    <main class="container">
-        <p>Project is starting...</p>
 
+    <main class="container">
         <!-- Add habit -->
         <section class="add-habit">
             <input type="text" id="habitName" placeholder="New habit..." />
@@ -33,8 +33,11 @@
             </div>
         </section>
 
+        <!-- Habit list -->
+        <section id="habitList" class="habit-list"></section>
     </main>
-    <script src="./script.js"></script>
+
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
