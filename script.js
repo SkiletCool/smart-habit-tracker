@@ -21,3 +21,11 @@ document.getElementById('addHabitBtn').onclick = () => {
   document.getElementById('habitName').value = '';
   render();
 };
+
+function updateProgress() {
+  if (!habits.length) return;
+  const completed = habits.filter(h => h.completed).length;
+  const percent = Math.round((completed / habits.length) * 100);
+  document.getElementById('progressFill').style.width = percent + '%';
+  document.getElementById('progressPercent').textContent = percent + '%';
+}

@@ -14,11 +14,25 @@
     </header>
     <main class="container">
         <p>Project is starting...</p>
+        
+        <!-- Add habit -->
         <section class="add-habit">
             <input type="text" id="habitName" placeholder="New habit..." />
             <input type="color" id="habitColor" value="#4f46e5" />
             <button id="addHabitBtn">Add</button>
         </section>
+
+        <!-- Progress -->
+        <section class="progress-section">
+            <div class="progress-info">
+                <span>Today's progress</span>
+                <span id="progressPercent">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </section>
+
     </main>
     <script src="/script.js"></script>
 </body>
