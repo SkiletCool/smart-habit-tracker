@@ -10,3 +10,29 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
+.add-habit {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-habit input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.add-habit input[type="color"] {
+    width: 50px;
+    border: none;
+    padding: 0;
+}
+
+.add-habit button {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+}
